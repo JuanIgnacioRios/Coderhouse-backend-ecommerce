@@ -43,10 +43,6 @@ app.use(passport.initialize())
 app.use(session({
     store: MongoStore.create({
         mongoUrl: process.env.MONGO_URL_SESSIONS,
-        mongoOptions: {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        },
         ttl: 15
     }),
     secret: "1234562024",
@@ -84,10 +80,7 @@ app.get('/loggerTest', (req, res) => {
 })
 
 //Mongoose Connection
-mongoose.connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+mongoose.connect(process.env.MONGO_URL)
     .then(() => {
         console.log("Conectado a la Base de Datos")
     })
