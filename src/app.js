@@ -84,7 +84,10 @@ app.get('/loggerTest', (req, res) => {
 })
 
 //Mongoose Connection
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
     .then(() => {
         console.log("Conectado a la Base de Datos")
     })
