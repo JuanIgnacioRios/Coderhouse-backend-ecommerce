@@ -42,7 +42,7 @@ initializePassport()
 app.use(passport.initialize())
 app.use(session({
     store: MongoStore.create({
-        mongoUrl: process.env.MONGO_URL_SESSIONS,
+        mongoUrl: "mongodb+srv://JuanRios:1234562024@cluster0.qk3spmw.mongodb.net/sessiones?retryWrites=true&w=majority",
         ttl: 15
     }),
     secret: "1234562024",
@@ -80,7 +80,7 @@ app.get('/loggerTest', (req, res) => {
 })
 
 //Mongoose Connection
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect("mongodb+srv://JuanRios:1234562024@cluster0.qk3spmw.mongodb.net/ecommerce?retryWrites=true&w=majority")
     .then(() => {
         console.log("Conectado a la Base de Datos")
     })
