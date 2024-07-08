@@ -1,0 +1,15 @@
+<h1>Terminar Compra: </h1>
+<h1>Productos: </h1>
+{{#each Products}}
+<div class="Product-Card">
+    <h3>Producto: {{productTitle}}</h1>
+    <h3>Cantidad: {{quantity}}</h2>
+</div>
+{{/each}}
+
+<form action="http://localhost:8081/api/payments/payment-intents" method="POST">
+{{#each Products}}
+<input type="text" name="{{productTitle}}" value="{{productId}}" hidden>
+{{/each}}
+<input type="submit" value="Finalizar Compra"></input>
+</form>
