@@ -7,7 +7,7 @@
 </div>
 {{/each}}
 
-<form action="http://localhost:8081/api/payments/payment-intents" method="POST">
+<form action="https://coderhouse-backend-ecommerce-production.up.railway.app/api/payments/payment-intents" method="POST">
 {{#each Products}}
 <input type="text" name="{{productTitle}}" value="{{productId}}" hidden>
 {{/each}}

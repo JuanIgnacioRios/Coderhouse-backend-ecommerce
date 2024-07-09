@@ -60,7 +60,7 @@ async function sendResetPasswordEmail(req, res) {
                 subject: "CoderhouseEcomm | Reestrablece tu contraseña",
                 html:`
                 <p>Hola! Como estas? <br></br> Espero puedas reestablecer tu contraseña <br></br></p>
-                <a href=" http://localhost:${PORT}/reset-password?token=${token}">Hacelo haciendo click acá</a>
+                <a href=" https://coderhouse-backend-ecommerce-production.up.railway.app/reset-password?token=${token}">Hacelo haciendo click acá</a>
                 `
             })
             res.send({status:"success", email: "Email Enviado!"})

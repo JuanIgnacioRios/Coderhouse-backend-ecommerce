@@ -32,7 +32,7 @@ class UsersManager{
                         subject: "CoderhouseEcomm | Su usuario se eliminó",
                         html:`
                         <p>Hola! Como estas? <br></br> Su usuario fue eliminado por inactividad,le pedimos por favor que vuelva a registrarse en nuestro sitioweb <br></br></p>
-                        <a href=" http://localhost:${PORT}/register">Hacelo haciendo click acá</a>
+                        <a href=" https://coderhouse-backend-ecommerce-production.up.railway.app/register">Hacelo haciendo click acá</a>
                         `
                     })  
                 }
